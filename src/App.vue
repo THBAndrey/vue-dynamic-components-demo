@@ -8,6 +8,9 @@
       <button @click="pushModal">Push modal</button>
       <button @click="pushModalWithEvents">Push modal with events</button>
       <button @click="pushQueuedModals">Push 5 queued modals</button>
+      <button @click="pushModalsWidthDifferentAnimations">
+        Push 5 modals with different animations
+      </button>
       <button @click="pushQueuedModalsWidthDifferentAnimations">
         Push 5 queued modals with different animations
       </button>
@@ -121,6 +124,25 @@ export default {
         );
       }
     },
+    pushModalsWidthDifferentAnimations() {
+      let animations = [
+        "fade",
+        "slide-fade",
+        "slide-top-fade",
+        "slide-right-fade",
+        "slide-bottom-fade",
+      ];
+      for (let i = 0; i < 5; i++) {
+        this.$dc.push(
+          DynamicModal,
+          {
+            props: { text: "Dynamic modal " + (i + 1) },
+            animation: animations[i],
+          },
+          "modals"
+        );
+      }
+    },
     pushQueuedModalsWidthDifferentAnimations() {
       let animations = [
         "fade",
@@ -153,5 +175,21 @@ export default {
 
 .button-group button {
   display: block;
+  margin-bottom: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: lightblue;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  outline: none;
+}
+
+.button-group button:hover {
+  background-color: rgb(109, 193, 221);
+}
+
+.button-group button:active {
+  background-color: rgb(33, 169, 214);
 }
 </style>
