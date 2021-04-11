@@ -1,0 +1,28 @@
+.slide-bottom-fade-enter-active {
+  transition: all 0.3s ease;
+}
+
+.slide-bottom-fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-bottom-fade-enter-active .dialog {
+  transition: all 0.3s ease;
+}
+
+.slide-bottom-fade-leave-active .dialog {
+  transition: all 0.3s ease;
+}
+
+.slide-bottom-fade-enter .dialog {
+  transform: translateY(200px);
+}
+
+.slide-bottom-fade-leave-to .dialog {
+  transform: translateY(-200px);
+}
+
+.slide-bottom-fade-enter,
+.slide-bottom-fade-leave-to {
+  opacity: 0;
+}

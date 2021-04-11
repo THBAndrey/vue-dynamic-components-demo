@@ -1,0 +1,28 @@
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-fade-enter-active .dialog {
+  transition: all 0.3s ease;
+}
+
+.slide-fade-leave-active .dialog {
+  transition: all 0.3s ease;
+}
+
+.slide-fade-enter .dialog {
+  transform: translateX(-200px);
+}
+
+.slide-fade-leave-to .dialog {
+  transform: translateX(200px);
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+  opacity: 0;
+}
